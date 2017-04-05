@@ -1,0 +1,7 @@
+maintainer       'Benjamin Staffin'
+maintainer_email 'benley@gmail.com'
+license          'Apache2'
+supports         'ubuntu'
+name             'nix'
+description      'Installs/Configures multiuser Nix'
+version          '1.0.7'

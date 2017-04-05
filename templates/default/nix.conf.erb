@@ -1,0 +1,8 @@
+build-users-group = nixbld
+build-max-jobs = <%= node['cpu']['total'] %>
+auto-optimise-store = true
+trusted-binary-caches = <%= @trusted_binary_caches.join(' ') %>
+extra-binary-caches = <%= @extra_binary_caches.join(' ') %>
+<% @extra_nix_options.each do |opt, val| %>
+<%= "#{opt} = #{val}" %>
+<% end %>

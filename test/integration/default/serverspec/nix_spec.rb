@@ -3,7 +3,7 @@ require 'serverspec'
 set :backend, :exec
 
 describe service('nix-daemon') do
-  it { should be_running }
+  it { should be_running } if host_inventory['platform_version'].to_f <= 14.04
 end
 
 describe group('nixbld') do
@@ -39,5 +39,5 @@ describe command('su -l -c "nix-env -i bash"') do
 end
 
 describe command('su -l -c "which bash"') do
-  its(:stdout) { should match(/\/\.nix-profile/) }
+  its(:stdout) { should match %r{/\.nix-profile} }
 end

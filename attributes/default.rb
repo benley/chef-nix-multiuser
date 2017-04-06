@@ -1,17 +1,23 @@
-default['nix']['version'] = '1.9'
+default['nix']['version'] = '1.11.8'
 
-default['nix']['url'] =
-  'https://nixos.org/releases/nix/nix-1.9/nix-1.9-x86_64-linux.tar.bz2'
+default['nix']['tarball_checksum'] =
+  '9055ccbc27bd5904cfe8ad9850fd457716ba2fa975d3721216d966cc53c65945'
 
-default['nix']['url_checksum'] =
-  '5c76611c631e79aef5faf3db2d253237998bbee0f61fa093f925fa32203ae32b'
-
-default['nix']['tarball_filename'] = 'nix-1.9-x86_64-linux.tar.bz2'
+default['nix']['mirror'] = 'https://nixos.org/releases/nix'
 
 default['nix']['trusted_binary_caches'] = [
   'https://cache.nixos.org',
   'https://hydra.nixos.org'
 ]
+
+default['nix']['binary_cache_public_keys'] = [
+  'cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=',
+  'hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs='
+]
+
+default['nix']['build_use_sandbox'] = true
+
+default['nix']['build_users_group'] = 'nixbld'
 
 default['nix']['extra_binary_caches'] = []
 

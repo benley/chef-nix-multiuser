@@ -130,7 +130,6 @@ service 'nix-daemon' do
   else
     provider Chef::Provider::Service::Systemd
     action :nothing # Socket activation
-    notifies :before, 'service[nix-daemon.socket]'
   end
 end
 

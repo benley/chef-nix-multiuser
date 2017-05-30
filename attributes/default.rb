@@ -1,7 +1,7 @@
-default['nix']['version'] = '1.11.8'
+default['nix']['version'] = '1.11.9'
 
 default['nix']['tarball_checksum'] =
-  '9055ccbc27bd5904cfe8ad9850fd457716ba2fa975d3721216d966cc53c65945'
+  'ae001425af88c0fef645988ec88892110c972cf880216586b5b3a5246e3dd572'
 
 default['nix']['mirror'] = 'https://nixos.org/releases/nix'
 
